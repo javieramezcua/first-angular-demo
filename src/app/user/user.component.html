@@ -2,8 +2,8 @@
 <!-- to creat this new component I just used: ng g c <name_of_component >-->
 <div>
 	<button (click)="onSelectUser()" >
-		<img [src]="imagePath" [alt]="selectedUser.name"/>  <!-- this way of print var is: property binding -->
+		<img [src]="imagePath" [alt]="name"/>  <!-- this way of print var is: property binding -->
 		 <!-- <img src="assets/users/{{ selectedUser.avatar }}" alt="{{selectedUser.name}}"/> -->
-		<span>{{ selectedUser.name }}</span> <!-- this way of print var is: string interpolation -->
+		<span>{{ name }}</span> <!-- this way of print var is: string interpolation -->
 	</button>
 </div>
