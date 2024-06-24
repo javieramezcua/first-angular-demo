@@ -11,12 +11,14 @@
 <main>
 
   <ul id="users">
-    <li><app-user [avatar]="users[0].avatar" [name]="users[0].name"/></li>
-    <li><app-user [avatar]="users[1].avatar" [name]="users[1].name"/></li>
-    <li><app-user [avatar]="users[2].avatar" [name]="users[2].name"/></li>
-    <li><app-user [avatar]="users[3].avatar" [name]="users[3].name"/></li>
+    <li><app-user [id]="users[0].id" [avatar]="users[0].avatar" [name]="users[0].name" (select)="onSelectUser($event)"/></li>
+    <li><app-user [id]="users[1].id" [avatar]="users[1].avatar" [name]="users[1].name" (select)="onSelectUser($event)"/></li>
+    <li><app-user [id]="users[2].id" [avatar]="users[2].avatar" [name]="users[2].name" (select)="onSelectUser($event)"/></li>
+    <li><app-user [id]="users[3].id" [avatar]="users[3].avatar" [name]="users[3].name" (select)="onSelectUser($event)"/></li>
+    <li><app-user [id]="users[6].id" [avatar]="users[6].avatar" [name]="users[6].name" (select)="onSelectUser($event)"/></li>
+    <li><app-user [id]="users[7].id" [avatar]="users[7].avatar" [name]="users[7].name" (select)="onSelectUser($event)"/></li>
   </ul>
-  
+  <app-tasks [name]="selectedUser ? selectedUser.name : '' "/>
 </main>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
